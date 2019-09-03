@@ -28,4 +28,40 @@ public class ClosestIntegersUtilTest {
         Integer[] actual = ClosestIntegersUtil.findValues(input, x, k);
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void compute_test3() {
+        Integer[] input = {10, 2, 14, 4, 7, 6};
+        int x = 5;
+        int k = 3;
+
+        Integer[] expected = {4, 6, 7};
+
+        Integer[] actual = ClosestIntegersSortingUtil.findValues(input, x, k);
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void compute_test4() {
+        Integer[] input = {-10, -50, 20, 17, 80};
+        int x = 20;
+        int k = 2;
+
+        Integer[] expected = {17, 20};
+
+        Integer[] actual = ClosestIntegersSortingUtil.findValues(input, x, k);
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void compute_test5() {
+        Integer[] input = {-10, -50, 20, 17, 80};
+        int x = 99;
+        int k = 2;
+
+        Integer[] expected = {20, 80};
+
+        Integer[] actual = ClosestIntegersSortingUtil.findValues(input, x, k);
+        assertArrayEquals(expected, actual);
+    }
 }
